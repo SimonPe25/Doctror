@@ -53,7 +53,7 @@ class RegisterModal extends Modal {
 	constructor({ id, classes}) {
 super({ id, classes});
 	}
-	
+
 createForm() {
 		const form = document.createElement("form");
 		form.id = "register-form";
