@@ -61,9 +61,9 @@ button:hover {
 }
 
 /* Добавить отступы к элементам контейнера */
-.container {
+/* .container {
   padding: 16px;
-}
+} */
 
 /* Модальный (фон) */
 .modal {
@@ -178,4 +178,9 @@ background-color:#944747
 
 .card_position{
   padding-left:120px;
+}
+
+.search{
+  display: flex;
+  justify-content: space-between;
 }

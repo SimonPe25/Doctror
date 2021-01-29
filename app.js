@@ -9,7 +9,6 @@ function isEmail() {
 function isEmpty(str) {
     return (str == null) || (str.length == 0);
 }
-console.log("aaa")
 // Получить модель
 var modal = document.getElementById('id01');
 
