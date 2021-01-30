@@ -67,6 +67,7 @@ function createSearch(){
     filter(searchInput,btn,select1,select2,URI);
 };
 
+
 function filter(searchInput,btn,select1,select2,URI){
     btn.addEventListener("click",search1)
 
@@ -74,7 +75,7 @@ function filter(searchInput,btn,select1,select2,URI){
         console.log(select1.value.toLowerCase());
         console.log(select2.value.toLowerCase());
         console.log(searchInput.value.toLowerCase());
-        
+
         return fetch(URI,{
             headers:{
                 Authorization: "Bearer 52770517-a12b-4007-9006-ae99ad6c4788",
@@ -87,9 +88,19 @@ function filter(searchInput,btn,select1,select2,URI){
             console.log(error)
         }).then((data) => {
             console.log(data)
+            filterObj(data,select2,select1)
         }).catch((error) => console.log(error));
-        
     }
 };
+
+function filterObj(data,select2,select1){
+    data.forEach(element => {
+        if(element.content.urgency === select2.value || element.content.done === select1.value){
+            console.log(element);
+        }
+        // console.log(element.content.urgency);
+    });
+}
+
 createSearch();
 
