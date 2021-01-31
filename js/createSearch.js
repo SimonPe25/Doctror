@@ -88,17 +88,61 @@ function filter(searchInput,btn,select1,select2,URI){
             console.log(error)
         }).then((data) => {
             console.log(data)
-            filterObj(data,select2,select1)
+            filterObj(searchInput,data,select2,select1)
         }).catch((error) => console.log(error));
     }
 };
 
-function filterObj(data,select2,select1){
+function filterObj(searchInput,data,select2,select1){
     data.forEach(element => {
-        if(element.content.urgency === select2.value || element.content.done === select1.value){
+            
+        // if(select1.value !== "All" && select2.value !== "All"){ /*По срочности и по выполнению*/
+        //     // console.log(1);
+        //     if(element.content.done === select1.value && element.content.urgency === select2.value){
+        //         console.log(element);
+        //     }
+        // }else if(select1.value !== "All" && select2.value === "All"){/*По выполнению*/
+        //     // console.log(2);
+        //     if(element.content.done === select1.value){
+        //         console.log(element);
+        //     }
+        // }else if(select1.value === "All" && select2.value !== "All"){/*По срочности*/
+        //     // console.log(3);
+        //     if(element.content.urgency === select2.value){
+        //         console.log(element);
+        //     }
+        // }else if(select1.value === "All" && select2.value === "All"){
+        //     console.log(element);
+        // }
+
+        if(select1.value !== "All" && select2.value !== "All" && element.content.visitPurpose.toUpperCase.includes(searchInput.value.toUpperCase())){ /*По срочности и по выполнению*/
+            // console.log(1);
+            if(element.content.done === select1.value && element.content.urgency === select2.value){
+                console.log(element);
+            }
+
+        }else if(select1.value !== "All" && select2.value === "All"){/*По выполнению*/
+            // console.log(2);
+            if(element.content.done === select1.value){
+                console.log(element);
+            }
+
+        }else if(select1.value === "All" && select2.value !== "All"){/*По срочности*/
+            // console.log(3);
+            if(element.content.urgency === select2.value){
+                console.log(element);
+            }
+
+        }else if(select1.value === "All" && select2.value === "All" && !element.content.visitPurpose.toUpperCase.includes(searchInput.value.toUpperCase())){
             console.log(element);
         }
-        // console.log(element.content.urgency);
+
+        if(searchInput.value !== ""){
+            if(element.content.visitPurpose.toUpperCase.includes(searchInput.value.toUpperCase())){
+                console.log(element);
+            }
+        }
+
     });
 }
 

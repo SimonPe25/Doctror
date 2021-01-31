@@ -36,6 +36,7 @@ class Therapist extends Visit{
 pushVisit();
 function pushVisit(){
     const URI = "https://ajax.test-danit.com/api/cards";
+    
     const one = new Dentist({
         visitPurpose:"Цель",
         urgency:"High",
@@ -49,19 +50,19 @@ function pushVisit(){
         done:"Done",
     });
     const three = new Therapist({
-        visitPurpose:"Цель",
+        visitPurpose:"Привет",
         urgency:"High",
         shortDescription:"",
         done:"Open",
     });
     const hour = new Cardiologist({
-        visitPurpose:"Цель",
+        visitPurpose:"Как дела?",
         urgency:"Low",
         shortDescription:"",
         done:"Open",
     });
-    const fife = new Therapist({
-        visitPurpose:"Цель",
+    const five = new Therapist({
+        visitPurpose:"Посмотреть",
         urgency:"Normal",
         shortDescription:"",
         done:"Open",
@@ -74,7 +75,23 @@ function pushVisit(){
     //         'Content-Type': 'application/json;charset=utf-8',
     //     },
     //     method:"POST",
-    //     body: JSON.stringify(two)
+    //     body: JSON.stringify(five)
+    // }).then((response) => {
+    //     console.log(response);
+    //     return response.json();
+    // }).catch((error) => {
+    //     console.log(error)
+    // }).then((data) => {
+    //     console.log(data)
+    // }).catch((error) => console.log(error));
+
+    // return fetch(URI+"/8122",{
+    //     headers:{
+    //         Authorization: "Bearer 52770517-a12b-4007-9006-ae99ad6c4788",
+    //         // 'Content-Type': 'application/json;charset=utf-8',
+    //     },
+    //     method:"DELETE",
+    //     // body: JSON.stringify(two)
     // }).then((response) => {
     //     console.log(response);
     //     return response.json();
