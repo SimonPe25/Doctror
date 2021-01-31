@@ -88,17 +88,60 @@
       </div>
     </div>
   </div>
-  <footer>
+
+
+  <button id="btn_modal_window">Create</button>
+  <div id="my_modal" class="modal">
+    <div class="modal_content">
+      <span class="close_modal_window">
+        <img src="./img/cansel.png" class="cansel">
+      </span>
+      <h1 class="card">Card</h1>
+      <form id="create_card" onsubmit="create_card(event)">
+        <input type="text" placeholder="First name" id="clients_name" name="clients_name" />
+        <input type="text" placeholder="Age" id="clients_age" name="clients_age" />
+        <input type="text" placeholder="Weight" id="clients_weight" name="clients_weight" />
+        <input type="text" placeholder="Pressure" id="clients_pressure" name="clients_pressure" />
+        <input type="text" placeholder="Past diseases of the cardiovascular system" id="clients_disease" name="clients_disease" />
+
+
+        <h3 class="visit_position">Останній візит</h3>
+        <input type="date" placeholder="Day of last visit" id="last_visit" name="last_visit" />
+        <input type="text" placeholder="Information" id="clients_information" name="clients_information" />
+        <select id="type_of_doctor">
+          <option>Лікар</option>
+          <option value="cardiologist">Кардіолог</option>
+          <option value="dantist">Стоматолог</option>
+          <option value="practithion">Терапевт</option>
+        </select>
+      </br>
+        <select id="type_of_priority">
+          <option>Пріорітет</option>
+          <option value="usual">Звичайний</option>
+          <option value="priority">Пріорітетний</option>
+          <option value="pressing">Невідкладний</option>
+        </select>
+      </br>
+        <input type="submit" value="Send" id="button_send"/>
+      </form>
+    </div>
+  </div>
+
+<div id="container_card">
+
+</div>
+
+<footer>
     Copyright © 2010-2021 ТОВ «Асоціація незалежних розробників»
   </footer>
-
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
-  <script src="app.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/card.js"></script>
   <script async="" type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.js"></script>
 </body>
 
