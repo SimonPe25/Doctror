@@ -1,5 +1,15 @@
-function create_card(e) {
-    e.preventDefault()
+const button_send = document.getElementById("create_card");
+
+button_send.addEventListener("submit",(e) => {
+    const my_modal = document.getElementById("my_modal");
+    my_modal.style.display = "none";
+    e.preventDefault();
+    createCard();
+})
+
+const cardDiv = document.createElement("div")
+
+function createCard() {
     let createForm = document.getElementById("create_card");
     let clientsName = createForm["clients_name"].value;
     let clientsAge = createForm["clients_age"].value;
@@ -27,8 +37,12 @@ function create_card(e) {
     console.log("Pressure:" + clientsPressure);
     console.log("Past diseases of the cardiovascular system:" + clientsDisease);
 
-    var container = document.getElementById("container_card");
-    var card = document.createElement("div");
+    // var container = document.getElementById("container_card");
+    const root = document.getElementById("root")
+    
+    var card = document.createElement("ul");
+
+    cardDiv.classList = "card-div";
 
     var cardName = document.createElement("h1");
     var cardText = document.createTextNode("Card");
@@ -81,6 +95,7 @@ function create_card(e) {
     card.appendChild(clientsPressureType);
 
     card.classList.add("cards_style");
-    container.appendChild(card);
+    cardDiv.append(card)
+    root.appendChild(cardDiv);
 
 }
