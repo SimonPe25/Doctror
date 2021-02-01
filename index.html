@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="main.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IDoctor</title>
+  
 </head>
 
 <body class="body">
+  
   <header>
     <nav class="navbar color">
       <div class="container-fluid">
@@ -15,16 +18,16 @@
           <img src="./img/logo.png" class="logo">
         </a>
         <form>
-          <button class="registration">Registration</button>
+          
+          <button
+          id="login"class="registration">Login</button>
       </div>
     </nav>
   </header>
   
   <div id="root" class="container"></div>
-
   <hr class="line">
-  
-  <button id="btn_modal_window">Create</button>
+    <button id="btn_modal_window">Create</button>
 
   <div id="my_modal" class="modal">
     <div class="modal_content">
@@ -38,8 +41,6 @@
         <input type="text" placeholder="Weight" id="clients_weight" name="clients_weight" />
         <input type="text" placeholder="Pressure" id="clients_pressure" name="clients_pressure" />
         <input type="text" placeholder="Past diseases of the cardiovascular system" id="clients_disease" name="clients_disease" />
-
-
         <h3 class="visit_position">Останній візит</h3>
         <input type="date" placeholder="Day of last visit" id="last_visit" name="last_visit" />
         <input type="text" placeholder="Information" id="clients_information" name="clients_information" />
@@ -76,11 +77,15 @@
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
 
+  <script src="app.js"></script>
+  <script src="./js/appRegister.js"></script>
+
+  
   <script src="js/registration.js"></script>
   <script src="js/card.js"></script>
-  <!-- <script async="" type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.js"></script> -->
   <script src="./js/main2344.js"></script>
   <script src="././js/classVisit.js"></script>
   <script src="./js/createSearch.js"></script>
+  <script async="" type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.js"></script>
 </body>
 </html>
