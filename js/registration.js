@@ -10,7 +10,7 @@ function isEmpty(str) {
     return (str == null) || (str.length == 0);
 }
 // Получить модель
-var modal = document.getElementById('id01');
+// var modal = document.getElementById('id01');
 
 // Когда пользователь щелкает в любом месте за пределами модального, закройте его
 window.onclick = function (event) {
@@ -19,11 +19,12 @@ window.onclick = function (event) {
     }
 }
 
-var modal = document.getElementById("my_modal");
+const modal = document.getElementById("my_modal");
 var btn = document.getElementById("btn_modal_window");
 var span = document.getElementsByClassName("close_modal_window")[0];
 
-btn.onclick = function () {
+btn.onclick = function (e) {
+    e.preventDefault();
     modal.style.display = "block";
 }
 
