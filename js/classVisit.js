@@ -4,6 +4,7 @@ class Visit {
         this.shortDescription = options.shortDescription;/*краткое описание*/
         this.urgency = options.urgency;/*срочность визитика*/
         this.fullName = options.fullName;/*ФИО*/
+        this.done = options.done;
     }
 }
 
