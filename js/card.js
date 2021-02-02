@@ -1,11 +1,11 @@
-const button_send = document.getElementById("create_card");
+// const button_send1 = document.getElementById("create_card");
 
-button_send.addEventListener("submit",(e) => {
-    const my_modal = document.getElementById("my_modal");
-    my_modal.style.display = "none";
-    e.preventDefault();
-    createCard();
-})
+// button_send1.addEventListener("submit",(e) => {
+//     const my_modal = document.getElementById("my_modal");
+//     my_modal.style.display = "none";
+//     e.preventDefault();
+//     createCard();
+// })
 
 const cardDiv = document.createElement("div")
 

@@ -15,6 +15,7 @@
         <a class="navbar-brand">
           <img src="./img/logo.png" class="logo">
         </a>
+        <button id="btn_modal_window">Create</button>
         <button id="login"class="registration">Login</button>
       </div>
     </nav>
@@ -22,77 +23,45 @@
   
   <div id="root" class="container"></div>
 
-  <button id="btn_modal_window">Create</button>
-
   <div id="my_modal" class="modal">
     <div class="modal_content">
       <span class="close_modal_window">
         <img src="./img/cansel.png" class="cansel">
       </span>
-      <h1 class="card">Card</h1>
+      <h1 class="card-title">Card</h1>
 
       <form id="create_card">
-        <input type="text" placeholder="First name" id="clients_name" name="clients_name" />
-        <input type="text" placeholder="Age" id="clients_age" name="clients_age" />
-        <input type="text" placeholder="Weight" id="clients_weight" name="clients_weight" />
-        <input type="text" placeholder="Pressure" id="clients_pressure" name="clients_pressure" />
-        <input type="text" placeholder="Past diseases of the cardiovascular system" id="clients_disease" name="clients_disease" />
+        <select id="type_of_doctor" class="form-select form-select-lg mb-3">
+          <option>Doctor</option>
+          <option value="Cardiologist">Cardiologist</option>
+          <option value="Dentist">Dentist</option>
+          <option value="Therapist">Therapist</option>
+        </select>
+        <select id="priority" class="form-select form-select-lg mb-3">
+          <option>Priority</option>
+          <option value="High">High</option>
+          <option value="Normal">Normal</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <input type="text" placeholder="Full Name" id="fullName" name="clients_name" required/>
+        <input type="text" placeholder="Visit Purpose" id="visitPurpose" name="clients_age" required/>
+        <input type="text" placeholder="Short Description" id="shortDescription" name="clients_weight" required/>
 
 
-        <h3 class="visit_position">Останній візит</h3>
-        <input type="date" placeholder="Day of last visit" id="last_visit" name="last_visit" />
-        <input type="text" placeholder="Information" id="clients_information" name="clients_information" />
-        <select id="type_of_doctor">
-          <option>Лікар</option>
-          <option value="cardiologist">Кардіолог</option>
-          <option value="dantist">Стоматолог</option>
-          <option value="practithion">Терапевт</option>
-        </select>
-      </br>
-        <select id="type_of_priority">
-          <option>Пріорітет</option>
-          <option value="usual">Звичайний</option>
-          <option value="priority">Пріорітетний</option>
-          <option value="pressing">Невідкладний</option>
-        </select>
-      </br>
-        <input type="submit" value="Send" id="button_send" />
+        <input type="hidden" placeholder="Pressure" id="clients_pressure" required/>
+        <input type="hidden" placeholder="Past diseases" id="clients_disease" required/>
+        <input type="hidden" placeholder="bodyMassIndex" id="bodyMassIndex"required />
+        <input type="hidden" placeholder="Age" id="age"/>
+
+        <input type="hidden" placeholder="Last Visit" id="last_visit" required />
+
+        <input type="hidden" placeholder="Information" id="clients_information" required/>
+        <input type="submit" value="Send" id="button_send"/>
       </form>
     </div>
   </div>
-
-  <!-- Модальный (содержит форму регистрации)
-  <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть модальный">
-      <img src="./img/logo.png"></span>
-    <form class="modal-content" action="/action_page.php">
-      <div class="colors">
-        <div class="container ">
-          <h1>Registration</h1>
-          <p>Please fill out this form to create an account.</p>
-          <hr>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Введите вашу почту" name="email" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Введите пароль" name="psw" required>
-
-          <label for="psw-repeat"><b>Repeat the password</b></label>
-          <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
-
-          <div class="clearfix">
-            <button type="submit" class="signup cancelbtn">Registration</button>
-            </br>
-            </br>
-            <button type="button" onclick="document.getElementById('id01').style.display='none'"
-              class="cancelbtn">Close</button>
-          </div>
-        </div>
-
-    </form>
-  </div> -->
-
-<footer>
+  <footer>
     Copyright © 2010-2021 ТОВ «Асоціація незалежних розробників»
   </footer>
 
@@ -105,6 +74,7 @@
   <script src="./js/registration.js"></script>
   <script src="./js/appRegister.js"></script>
   <script src="./js/classVisit.js"></script>
+  <script src="./js/main.js"></script>
   <script src="./js/createSearch.js"></script>
   <script src="./js/card.js"></script>
   <script async="" type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.js"></script>

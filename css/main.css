@@ -194,7 +194,7 @@ background-color:#944747
 }
 .modal .modal_content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 8% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -214,9 +214,10 @@ background-color:#944747
 .modal_window{
   background-color:red;
 }
-.card{
+.card-title{
   text-align: center;
   color:#944747;
+  border: none;
 }
 
 .type_of_doctor{
@@ -228,7 +229,7 @@ background-color:#944747
   color:#944747;
 
 }
-#last_visit{
+/* #last_visit{
   width:210px;
   background-color:#CB9696;
   justify-content: center;
@@ -238,23 +239,23 @@ background-color:#944747
   margin-right: auto;
   font-size: 20px;
   color:#944747;
-}
-#type_of_doctor{
+} */
+/* #type_of_doctor{
   width:220px;
   background-color:#CB9696;
   justify-content: center;
   display: block;
   font-size: 20px;
   color:#944747;
-}
-#type_of_priority{
+} */
+/* #type_of_priority{
   width:220px;
   background-color:#CB9696;
   justify-content: center;
   display: block;
   font-size: 20px;
   color:#944747;
-}
+} */
 #button_send{
   width:100px;
   background-color:#CB9696;
@@ -283,4 +284,8 @@ background-color:#944747
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 20px;
+}
+
+.nonactive{
+  display: none;
 }
