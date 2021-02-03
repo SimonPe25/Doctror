@@ -194,10 +194,10 @@ background-color:#944747
 }
 .modal .modal_content {
     background-color: #fefefe;
-    margin: 8% auto;
+    margin: -1% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     z-index: 99999;
 }
 .modal .modal_content .close_modal_window {
