@@ -1,4 +1,6 @@
-function createSearch(){
+import {filter} from "./filter.js"
+
+export function createSearch(){
 
     const URI = "https://ajax.test-danit.com/api/cards";
     /*root*/
@@ -69,71 +71,5 @@ function createSearch(){
 };
 
 
-function filter(searchInput,btn,select1,select2,URI){
-    btn.addEventListener("click",search1)
 
-    function search1(){
-        console.log(select1.value.toLowerCase());
-        console.log(select2.value.toLowerCase());
-        console.log(searchInput.value.toLowerCase());
-
-        return fetch(URI,{
-            headers:{
-                Authorization: "Bearer 52770517-a12b-4007-9006-ae99ad6c4788",
-            },
-            method:"GET",
-        }).then((response) => {
-            console.log(response);
-            return response.json();
-        }).catch((error) => {
-            console.log(error)
-        }).then((data) => {
-            console.log(data)
-            filterObj(searchInput,data,select2,select1)
-        }).catch((error) => console.log(error));
-    }
-};
-
-function filterObj(searchInput,data,select2,select1){
-    data.forEach(element => {
-        if(select1.value !== "All" && select2.value !== "All" && searchInput.value !== ""){ /*По срочности и по выполнению и по заголовку*/
-            if(element.content.done === select1.value && element.content.urgency === select2.value && element.content.visitPurpose.toUpperCase().includes(searchInput.value.toUpperCase())){
-                console.log(element);
-            }
-        }else if(select1.value !== "All" && select2.value === "All" && searchInput.value !== ""){/*По выполнению и по заголовку*/
-            if(element.content.done === select1.value && element.content.visitPurpose.toUpperCase().includes(searchInput.value.toUpperCase())){
-                console.log(element);
-            }
-
-        }else if(select1.value === "All" && select2.value !== "All" && searchInput.value !== ""){/*По срочности и по заголовку*/
-            if(element.content.urgency === select2.value && element.content.visitPurpose.toUpperCase().includes(searchInput.value.toUpperCase())){
-                console.log(element);
-            }
-
-        }else if(select1.value !== "All" && select2.value === "All" && searchInput.value === ""){/*По выполнению*/
-            if(element.content.done === select1.value){
-                console.log(element);
-            }
-
-        }else if(select1.value === "All" && select2.value !== "All" && searchInput.value === ""){/*По срочности*/
-            if(element.content.urgency === select2.value){
-                console.log(element);
-            }
-
-        }else if(select1.value !== "All" && select2.value !== "All" && searchInput.value === ""){/*По срочности и по выполнению*/
-            if(element.content.done === select1.value && element.content.urgency === select2.value ){
-                console.log(element);
-            }
-
-        }else if(select1.value === "All" && select2.value === "All" && searchInput.value !== ""){
-            if(element.content.visitPurpose.toUpperCase().includes(searchInput.value.toUpperCase())){
-                console.log(element);
-            }
-        }else if(select1.value === "All" && select2.value === "All" && searchInput.value === ""){
-            console.log(element);
-        }
-    });
-}
-
-createSearch();
 

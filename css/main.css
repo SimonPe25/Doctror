@@ -68,14 +68,14 @@ button:hover {
 
 /* Модальный (фон) */
 .modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed; /* Оставаться на месте */
+  /* display: none; Скрыто по умолчанию */
+  /* position: fixed; Оставаться на месте */
   z-index: 1; /* Сидеть на вершине */
   left: 0;
   top: 0;
-  width: 1200px; /* Полная ширина */
-  height: 1200px; /* Полный высота */
-  overflow: auto; /* Включите прокрутку, если это необходимо */
+  /* width: 1200px; Полная ширина */
+  /* height: 1200px; Полный высота */
+  /* overflow: auto; Включите прокрутку, если это необходимо */
   background-color: #CB9696;
   padding-top: 50px;
 }
@@ -181,14 +181,14 @@ background-color:#944747
   padding-left:120px;
 }
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+    /* display: none; */
+    /* position: fixed; */
+    /* z-index: 1; */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    /* overflow: auto; */
     background-color: rgba(0,0,0,0.6);
     z-index: 1000;
 }
@@ -207,7 +207,7 @@ background-color:#944747
     font-weight: bold;
     cursor: pointer;
 }
-.cansel{
+.cancel{
   width: 24px;
   height: 24px;
 }
@@ -229,33 +229,6 @@ background-color:#944747
   color:#944747;
 
 }
-/* #last_visit{
-  width:210px;
-  background-color:#CB9696;
-  justify-content: center;
-  display: block;
-  margin-top:20px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px;
-  color:#944747;
-} */
-/* #type_of_doctor{
-  width:220px;
-  background-color:#CB9696;
-  justify-content: center;
-  display: block;
-  font-size: 20px;
-  color:#944747;
-} */
-/* #type_of_priority{
-  width:220px;
-  background-color:#CB9696;
-  justify-content: center;
-  display: block;
-  font-size: 20px;
-  color:#944747;
-} */
 #button_send{
   width:100px;
   background-color:#CB9696;

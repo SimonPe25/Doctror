@@ -1,41 +1,26 @@
-function isEmail() {
-    var str = document.getElementById("email").value;
-    var status = document.getElementById("status");
-    var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-    if (re.test(str)) status.innerHTML = "Адрес правильный";
-    else status.innerHTML = "Адрес неверный";
-    if (isEmpty(str)) status.innerHTML = "Поле пустое";
-}
-function isEmpty(str) {
-    return (str == null) || (str.length == 0);
-}
-// Получить модель
-// var modal = document.getElementById('id01');
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
-// Когда пользователь щелкает в любом месте за пределами модального, закройте его
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// const modal = document.getElementById("my_modal");
+// const btn = document.getElementById("btn_modal_window");
+// const span = document.getElementsByClassName("close_modal_window")[0];
 
-var modal = document.getElementById("my_modal");
-var btn = document.getElementById("btn_modal_window");
-var span = document.getElementsByClassName("close_modal_window")[0];
+// btn.onclick = function () {
+//     modal.style.display = "block";
+// }
 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
+// span.onclick = function () {
+//     modal.style.display = "none";
+// }
 
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
 // function create_card(e){
 //     e.preventDefault()
