@@ -37,7 +37,6 @@ export function modalCreateCard() {
     const lastVisit = document.createElement("input");
     const information = document.createElement("input");
 
-
     const btn = document.createElement("input");
 
     //СТИЛИЗАЦИЯ
