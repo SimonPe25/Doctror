@@ -12,6 +12,12 @@ modalCreateCard();
 createSearch();
 
 
+localStorage.setItem("token", "e8679ad1-6da6-4f79-a795-c6e8bd9ffdb5")
+
+
+
+
+
 
 
 

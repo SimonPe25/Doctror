@@ -164,7 +164,15 @@ class Therapist extends Visit {
     }
 }
 
-var clientSecret = "";
+
+
+let userPasswordGet = localStorage.getItem('Uncaught SyntaxError')
+let userPassword1 = userPasswordGet.replace(/[?]/gi, 0);
+
+
+let clientSecret = localStorage.getItem('token');
+let userLogin = localStorage.getItem('login')
+let userPassword = userPassword1;
 
 
 fetch("https://ajax.test-danit.com/api/v2/cards/login", {
@@ -172,7 +180,7 @@ fetch("https://ajax.test-danit.com/api/v2/cards/login", {
     headers: {
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ email: 'idoctor@den-it.com', password: '000000' })
+    body: JSON.stringify({ email: userLogin, password: userPassword })
 })
     .then(response => response.text())
     .then(token => clientSecret = token)
@@ -315,8 +323,8 @@ function deleteVisit(e) {
             'Authorization': `Bearer ${clientSecret}`
         }
     })
-        .then(response => {visitCard.parentNode.removeChild(visitCard);token();});
-    
+        .then(response => { visitCard.parentNode.removeChild(visitCard); token(); });
+
 }
 
 export function createVisit(e) {

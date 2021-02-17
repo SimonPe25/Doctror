@@ -41,6 +41,11 @@ export default function AutorizationOptins() {
             email: login.value,
             password: password.value,
           };
+           let parol = password.value;
+           let newParol = parol.replace(/0/gi, '?');
+
+          localStorage.setItem("login", login.value)
+          localStorage.setItem('Uncaught SyntaxError', newParol)
                       
           function post() {
             return fetch("https://ajax.test-danit.com/api/v2/cards/login", {
