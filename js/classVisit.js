@@ -315,7 +315,7 @@ function deleteVisit(e) {
             'Authorization': `Bearer ${clientSecret}`
         }
     })
-        .then(response => {visitCard.parentNode.removeChild(visitCard);wathCards();});
+        .then(response => {visitCard.parentNode.removeChild(visitCard);token();});
     
 }
 
