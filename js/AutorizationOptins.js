@@ -6,7 +6,6 @@ import createWindowCard from "./createWindowCard.js";
 import token from "./tokenVerification.js"
 import wathCards from "./wathCard.js"
 
-//
 import Modal from "./classModal.js";
 
 
@@ -17,7 +16,6 @@ export default function AutorizationOptins() {
     constructor({ id, classes }) {
       super({ id, classes });
     }
-
     createFormElements() {
       const login = document.createElement("input");
       login.type = "text";
@@ -72,11 +70,7 @@ export default function AutorizationOptins() {
                 if (response.status === 200) {
                   unBlockSearch()
                   deleteBtn()
-                  // delAlert()
                   token();
-                  // renameLogin()
-
-                  //createWindowCard()
                   return response.text();
                 } else {
                   alert(`Вы не зарегистрированный пользователь`)

@@ -5,5 +5,4 @@ export default function unBlockSearch() {
     // let loginRename = document.getElementsById("login");
     btnRemove.style.opacity = 1;
     modalRemove.classList.remove("active");
-
 }
