@@ -1,82 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="./css/main.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IDoctor</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/autorization.css" />
+    <link rel="icon" href="#" type="image/x-icon">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDoctor</title>
+  </head>
 
-<body class="body">
+  <body class="body background-image">
+    <header>
+      <nav class="navbar color"> 
+        <div class="container-fluid container">
+          <a class="navbar-brand">
+            <img src="./img/logo.png" class="logo" />
+          </a>
+          <button id="btn_modal_window" class="registration-create">
+            Create card
+          </button>
+          <button id="login" class="registration">Login</button>
+        </div>
+      </nav>
+    </header>
+    <div id="root" class="container" ></div>
+    
+    <footer id="footer" >
+      Copyright © 2010-2021 ТОВ «Асоціація незалежних розробників»
+    </footer>
 
-  <header>
-    <nav class="navbar color">
-      <div class="container-fluid">
-        <a class="navbar-brand">
-          <img src="./img/logo.png" class="logo">
-        </a>
-        <button id="btn_modal_window">Create</button>
-        <button id="login"class="registration">Login</button>
-      </div>
-    </nav>
-  </header>
-  
-  <div id="root" class="container"></div>
-
-  <div id="my_modal" class="modal">
-    <div class="modal_content">
-      <span class="close_modal_window">
-        <img src="./img/cansel.png" class="cansel">
-      </span>
-      <h1 class="card-title">Card</h1>
-
-      <form id="create_card">
-        <select id="type_of_doctor" class="form-select form-select-lg mb-3">
-          <option>Doctor</option>
-          <option value="Cardiologist">Cardiologist</option>
-          <option value="Dentist">Dentist</option>
-          <option value="Therapist">Therapist</option>
-        </select>
-        <select id="priority" class="form-select form-select-lg mb-3">
-          <option>Priority</option>
-          <option value="High">High</option>
-          <option value="Normal">Normal</option>
-          <option value="Low">Low</option>
-        </select>
-
-        <input type="text" placeholder="Full Name" id="fullName" name="clients_name" required/>
-        <input type="text" placeholder="Visit Purpose" id="visitPurpose" name="clients_age" required/>
-        <input type="text" placeholder="Short Description" id="shortDescription" name="clients_weight" required/>
-
-
-        <input type="hidden" placeholder="Pressure" id="clients_pressure" required/>
-        <input type="hidden" placeholder="Past diseases" id="clients_disease" required/>
-        <input type="hidden" placeholder="bodyMassIndex" id="bodyMassIndex"required />
-        <input type="hidden" placeholder="Age" id="age"/>
-
-        <input type="hidden" placeholder="Last Visit" id="last_visit" required />
-
-        <input type="hidden" placeholder="Information" id="clients_information" required/>
-        <input type="submit" value="Send" id="button_send"/>
-      </form>
-    </div>
-  </div>
-  <footer>
-    Copyright © 2010-2021 ТОВ «Асоціація незалежних розробників»
-  </footer>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-
-  <script src="./js/registration.js"></script>
-  <script src="./js/appRegister.js"></script>
-  <script src="./js/classVisit.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./js/createSearch.js"></script>
-  <script src="./js/card.js"></script>
-  <script async="" type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.js"></script>
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="./js/classVisit.js" type="module"></script>
+    <script src="./js/createSearch.js" type="module"></script>
+    <script src="./js/filter.js" type="module"></script>
+  <script src="./js/modalCreateCard.js" type="module"></script>
+  <script src="./js/openModal.js" type="module"></script>
+  <script src="./js/clearModal.js" type="module"></script>
+  <script src="./js/classVisit.js"  type="module" ></script>
+    <script src="./js/main.js" type="module"></script>
+    <script async="" type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.js"></script>
+  </body>
 </html>

@@ -1,0 +1,130 @@
+ .wrapperCards {
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 2vw;
+    background-color: black;
+    min-width: 30vh;
+    min-height: 50vh;
+    padding: 0 10px 0 10px;
+    border: 0.5px solid #9b9b9b;
+    border-radius: 20px;
+    background-color: rgba(129, 191, 199, 0.2);
+    
+ }
+ 
+
+ .card-div{
+   justify-self: flex-start;
+   align-self: flex-start;
+
+  scale: 0.6;
+  padding: .5em;
+    
+ }
+
+ .navbar {
+    border-bottom: solid 2px rgba(9, 9, 49, 0.5);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.2)
+    );
+    animation: background 25s infinite alternate;
+  }
+  @keyframes background {
+    100% {
+      background:  rgba(115, 184, 189, 0.2);
+      box-shadow: 0 -200px 100px -100px rgba(23, 8, 107, 0.2) inset;
+    }
+}
+
+footer {
+    /* background-color: #cb9696;  */
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(2, 2, 20);
+    border-top: solid 2px rgba(9, 9, 49, 0.5);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.2)
+    );
+    animation: background 40s infinite alternate;
+  }
+  @keyframes background {
+    100% {
+      background:  rgba(115, 184, 189, 0.2);
+      box-shadow: 0 -200px 100px -100px rgba(23, 8, 107, 0.2) inset;
+    }
+}
+
+.registration {
+    display: block;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    color: #050836;
+    font-size: large;
+    font-weight: 600;
+  }
+  
+  .registration:hover {
+    color: white;
+    background-color: #140a3d;
+    
+  }
+  .registration-create {
+    display: none;
+    border: 2px solid #d4d4d4;
+    border-radius: 12px;
+    color: #02062e;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .registration-create:hover {
+    color: white;
+    background-color: #140a3d;
+  }
+
+  button {
+    
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.2)
+    );
+    animation: background 30s infinite alternate;
+  }
+  @keyframes background {
+    100% {
+      background:  rgba(115, 184, 189, 0.2);
+      box-shadow: 0 -200px 100px -100px rgba(23, 8, 107, 0.2) inset;
+    }
+}
+  
+
+
+  
+  button:hover {
+    opacity: 1;
+  }
+
+  .alert{
+    display: block;
+  }
+
+
+
